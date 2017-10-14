@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace ControllersAndActions.Controllers
 {
-    public class DerivedController : Controller
-    {
+    public class DerivedController : Controller {
         // GET: Derived
-        public ActionResult Index()
-        {
-            return View();
+        public ActionResult Index() {
+            ViewBag.Message = "Hello from the DerivedController Index method";
+            return View("MyView");
         }
     }
 }
