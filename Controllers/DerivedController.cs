@@ -14,13 +14,7 @@ namespace ControllersAndActions.Controllers
             return View("MyView");
         }
         public ActionResult ProduceOutput() {
-            if (Server.MachineName == "TINY") {
-                return new CustomRedirectResult { Url = "/Basic/Index" };
-            }
-            else {
-                Response.Write("Controller: Derived, Action: ProduceOutput");
-                return null;
-            }
+            return Redirect("/Basic/Index");
         }
     }
 }
